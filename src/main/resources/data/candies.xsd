@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/candies"
+        xmlns:tns="http://www.example.com/candies"
+        elementFormDefault="qualified">
+    <element name="candies">
+        <complexType>
+            <sequence>
+                <element name="candy" type="tns:Candy"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Candy">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="energy" type="positiveInteger"/>
+            <element name="ingredients">
+                <complexType>
+                    <sequence>
+                        <element name="water" type="positiveInteger"/>
+                        <element name="sugar" type="positiveInteger"/>
+                        <element name="fructose" type="positiveInteger"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="value">
+                <complexType>
+                    <sequence>
+                        <element name="proteins" type="double"/>
+                        <element name="fats" type="double"/>
+                        <element name="carbohydrates" type="double"/>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="production" type="string"/>
+            <element name="date" type="date"/>
+        </sequence>
+
+        <attribute name="id" type="tns:id" use="required"/>
+
+        <attribute name="type" default="шоколадная">
+            <simpleType>
+                <restriction base="string">
+                    <enumeration value="желейная"></enumeration>
+                    <enumeration value="шоколадная"></enumeration>
+                    <enumeration value="карамель"></enumeration>
+                    <enumeration value="ирис"></enumeration>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <simpleType name="id">
+        <restriction base="ID">
+            <pattern value="ID\d+"/>
+        </restriction>
+    </simpleType>
+</schema>

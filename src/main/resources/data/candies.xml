@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<candies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/candies"
+         xsi:schemaLocation="http://www.example.com/candies candies.xsd">
+
+    <candy id="ID1" type="желейная">
+        <name>Бешеная пчёлка фрутти</name>
+        <energy>322</energy>
+        <ingredients>
+            <water>20</water>
+            <sugar>40</sugar>
+            <fructose>30</fructose>
+        </ingredients>
+        <value>
+            <proteins>0.3</proteins>
+            <fats>0.6</fats>
+            <carbohydrates>79.6</carbohydrates>
+        </value>
+        <production>Roshen</production>
+        <date>2020-05-13</date>
+    </candy>
+
+    <candy id="ID2" type="шоколадная">
+        <name>Сорванец</name>
+        <energy>539</energy>
+        <ingredients>
+            <water>20</water>
+            <sugar>40</sugar>
+            <fructose>30</fructose>
+        </ingredients>
+        <value>
+            <proteins>7.4</proteins>
+            <fats>33.9</fats>
+            <carbohydrates>51.8</carbohydrates>
+        </value>
+        <production>Коммунарка</production>
+        <date>2020-04-13</date>
+    </candy>
+
+    <candy id="ID3" type="карамель">
+        <name>Карамель Джус-микс «Roshen» с фруктово-ягодной начинкой</name>
+        <energy>380</energy>
+        <ingredients>
+            <water>70</water>
+            <sugar>40</sugar>
+            <fructose>30</fructose>
+        </ingredients>
+        <value>
+            <proteins>0.0</proteins>
+            <fats>0.0</fats>
+            <carbohydrates>94.4</carbohydrates>
+        </value>
+        <production>Roshen</production>
+        <date>2020-05-25</date>
+    </candy>
+</candies>
